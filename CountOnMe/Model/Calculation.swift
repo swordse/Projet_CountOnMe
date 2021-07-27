@@ -81,7 +81,12 @@ class Calculation {
         if hasResult {
             return
         }
+        
+        if calculationString.last == " " {
+            calculationString.append("0.")
+        } else {
         calculationString.append(".")
+        }
     }
     
     func tapOperator(symbol: String) {
